@@ -1,0 +1,33 @@
+.gender {
+  background-color: rgb(245, 245, 245);
+  padding: 20px 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 0px black;
+  margin-bottom: 1rem;
+}
+
+.form-input {
+  display: flex;
+  column-gap: 1rem;
+  justify-content: center;
+}
+
+.form-input > * {
+  flex: 1rem;
+}
+
+.form-input > label,
+.form-input > span {
+  text-align: end;
+  justify-content: center;
+}
+.form-input > i {
+  text-align: end;
+  padding: 0px -10px;
+  column-gap: 1rem;
+}
+
+.form-input > button {
+  flex: none;
+}
