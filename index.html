@@ -33,54 +33,87 @@
                 ideal juga menandakan kondisi tubuh yang sehat. Bagaimana
                 denganmu? Yuk, hitung sekarang di kalkulator BMI.
               </p>
-              <div
-                class="gender"
-                style="display: flex; flex-direction: column; gap: 1rem"
-              >
-                <div class="form-input">
-                  <span><b>Jenis Kelamin</b></span>
-                  <div style="display: flex">
-                    <label for=""
-                      ><input
+              <form id="formKalkulatorBmi">
+                <div
+                  class="gender"
+                  style="display: flex; flex-direction: column; gap: 0.5rem"
+                >
+                  <div class="form-input1">
+                    <b>Jenis Kelamin</b>
+                    <div style="display: flex">
+                      <input
                         type="radio"
-                        name="Jenis-Kelamin"
-                        value="Pria"
-                      />Pria</label
-                    >
-                    <label for="Jenis-Kelamin"
-                      ><input
+                        name="jenis_kelamin"
+                        id="pria"
+                        value="pria"
+                        required
+                        checked="true"
+                      />
+                      <label for="pria">Pria</label>
+                      <input
                         type="radio"
-                        name="Jenis-Kelamin"
-                        value="Wanita"
-                      />Wanita</label
+                        name="jenis_kelamin"
+                        id="wanita"
+                        value="wanita"
+                        required
+                      />
+                      <label for="wanita">Wanita</label>
+                    </div>
+                  </div>
+                  <label for="" class="Berat-Badan"><b> Berat Badan</b></label>
+                  <div class="form-input">
+                    <div class="input-icon">
+                      <i class="fa-solid fa-pencil"></i>
+                      <input
+                        type="number"
+                        name="Berat-Badan"
+                        placeholder="kg"
+                        id="beratBadan"
+                        required
+                        oninvalid="setCustomValidity('Berat badan tidak boleh kosong!')"
+                      />
+                    </div>
+                  </div>
+                  <label for="" class="Usia"><b> Usia</b></label>
+                  <div class="form-input">
+                    <div class="input-icon">
+                      <i class="fa-solid fa-pencil"></i>
+                      <input
+                        type="number"
+                        name="Tahun"
+                        placeholder="minimal usia 18 tahun"
+                        id="usia"
+                        required
+                        min="18"
+                      />
+                    </div>
+                  </div>
+                  <label for="" class="Tinggi-Badan"
+                    ><b>Tinggi Badan</b>
+                  </label>
+                  <div class="form-input">
+                    <div class="input-icon">
+                      <i class="fa-solid fa-pencil"></i>
+                      <input
+                        type="number"
+                        name="Tinggi-Badan"
+                        placeholder="cm"
+                        id="tinggiBadan"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="form-input3">
+                    <button
+                      type="sumbit"
+                      style="background-color: rgb(69, 156, 255)"
                     >
+                      Hitung BMI
+                    </button>
+                    <button id="reset" type="reset">Reset</button>
                   </div>
                 </div>
-                <div class="form-input">
-                  <label><b>Berat Badan (kg)</b></label>
-                  <i class="fa-solid fa-pencil"></i>
-                  <input type="number" name="Berat-Badan" />
-                </div>
-                <div class="form-input">
-                  <label><b>Usia (tahun)</b></label>
-                  <i class="fa-solid fa-pencil"></i>
-                  <input type="number" name="Tahun" />
-                </div>
-                <div class="form-input">
-                  <label><b>Tinggi Badan (cm)</b></label>
-                  <i class="fa-solid fa-pencil"></i>
-                  <input type="number" name="Tinggi-Badan" />
-                </div>
-                <div class="form-input">
-                  <button
-                    type="sumbit"
-                    style="background-color: rgb(0, 183, 255)"
-                  >
-                    Hitung BMI
-                  </button>
-                  <button type="reset">RESET</button>
-                </div>
-              </div>
+              </form>
             </div>
             <div class="col" style="flex: 1">
               <div class="Ke2">
@@ -109,6 +142,23 @@
           </article>
         </div>
       </section>
+      <br />
+      <br />
+      <section
+        class="section2"
+        style="padding: 0 1rem"
+        id="displayHasilBmi"
+      ></section>
     </main>
+    <div class="widget-contact" style="text-align: center">
+      <p>Kontak RevoU</p>
+      <p></p>
+    </div>
+    <footer style="text-align: center">
+      <div class="copyright">
+        <p>© Copyright 2023 by Yanuaris Firman Kudmas tugas web RevoU</p>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
   </body>
 </html>
